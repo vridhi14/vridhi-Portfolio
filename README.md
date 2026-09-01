@@ -1,31 +1,91 @@
-# Vridhi Rajeev — Solar System Portfolio
+# ✦ Vridhi Rajeev — Full Stack Developer Portfolio
 
-Animated full-stack portfolio built with **React + Node + Express + MongoDB**.
+> A bold, interactive full-stack developer portfolio built to showcase my work, skills, projects, and how I think as a developer.
 
-## Features
+🌐 **Live Portfolio:** https://vridhi-dev.vercel.app/  
+💻 **GitHub Repository:** https://github.com/vridhi14/vridhi-Portfolio
 
-- Solar-system / space visual language
-- Uploaded profile portrait integrated into the hero
-- Scroll reveal animations, orbit animations, marquee, floating chips and project planets
-- Four featured projects with live demo + GitHub links
-- React frontend fetches project data from Express
-- Contact form posts to Express and stores messages in MongoDB
-- Helmet, CORS, rate limiting and validation basics
-- Responsive desktop/tablet/mobile layout
+---
 
-## Projects
+## ✦ About
 
-- Nexora — https://nexora-yazk.onrender.com
-- Brainix — https://brainix-rose.vercel.app
-- AI Code Reviewer — https://ai-code-reviewer-o6w9.onrender.com
-- Realtime Location — https://realtime-device-track-sv6k.onrender.com
+This is my personal developer portfolio, designed around a dark solar-system / space-inspired visual experience.
 
-## Run
+Instead of building a traditional static portfolio, I wanted the website to feel interactive, expressive, and personal — while still demonstrating real full-stack development concepts.
 
-1. `npm install`
-2. Copy `server/.env.example` to `server/.env`
-3. Add your MongoDB URI
-4. `npm run dev`
+The portfolio combines a React frontend with a Node.js + Express backend and MongoDB for handling dynamic project data and contact form submissions.
 
-Client: http://localhost:5173
-API: http://localhost:5000/api
+---
+
+## 🚀 Features
+
+- 🌌 Interactive solar-system / space-inspired UI
+- ✨ Animated background and visual effects
+- 🖱️ Custom cursor interactions
+- 🎨 Bold, responsive visual design
+- 📱 Responsive layout for desktop, tablet, and mobile
+- 👩‍💻 Personal developer introduction and profile section
+- 🛠️ Dedicated tech stack section
+- 💼 Featured projects with live demos and GitHub links
+- 🧠 "How I Think" section showcasing my developer mindset
+- 📬 Working contact form
+- 🔗 Social links
+- ⚡ Scroll and reveal animations
+- 🌐 Dynamic project data fetched from the backend
+
+---
+
+## 🧩 Tech Stack
+
+### Frontend
+
+- React.js
+- JavaScript
+- HTML5
+- CSS3
+- Vite
+
+### Backend
+
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+
+### Security & Backend Utilities
+
+- Helmet
+- CORS
+- Rate Limiting
+- Request validation
+
+### Deployment
+
+- Vercel
+
+---
+
+## 🏗️ Project Structure
+
+```text
+vridhi-Portfolio/
+│
+├── client/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── main.jsx
+│   │   └── styles.css
+│   ├── index.html
+│   └── package.json
+│
+├── server/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── server.js
+│   └── package.json
+│
+├── .gitignore
+├── package.json
+└── README.md
