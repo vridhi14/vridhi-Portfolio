@@ -174,11 +174,12 @@ function App() {
         </button>
         <GooeyNav
           items={[
-            { label: "ABOUT", href: "#about" },
-            { label: "STACK", href: "#stack" },
-            { label: "PROJECTS", href: "#projects" },
-            { label: "CONTACT", href: "#contact" },
-          ]}
+  { label: "ABOUT", href: "#about" },
+  { label: "STACK", href: "#stack" },
+  { label: "PROJECTS", href: "#projects" },
+  { label: "HOW I THINK", href: "#how-i-think" },
+  { label: "CONTACT", href: "#contact" },
+]}
           initialActiveIndex={0}
           isOpen={menu}
         />
@@ -433,7 +434,7 @@ function App() {
           </div>
         </section>
 
-        <section className="section architecture reveal">
+        <section  id="how-i-think" className="section architecture reveal">
           <div className="section-tag">04 / HOW I THINK</div>
           <div className="architecture-grid">
             <div>
