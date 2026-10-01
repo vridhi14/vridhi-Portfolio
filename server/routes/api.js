@@ -67,12 +67,12 @@ router.post("/contact", async (req, res) => {
 
     try {
   await transporter.sendMail({
-    from: process.env.EMAIL_USER,
-    to: process.env.EMAIL_USER,
-    replyTo: email,
-    subject: `Portfolio contact from ${name}`,
-    text: `Name: ${name}\nEmail: ${email}\n\n${message}`
-  });
+  from: `"${name}" <${process.env.EMAIL_USER}>`,
+  to: process.env.EMAIL_USER,
+  replyTo: email,
+  subject: `Portfolio contact from ${name} (${email})`,
+  text: `Name: ${name}\nEmail: ${email}\n\n${message}`
+});
 } catch (e) {
   console.error("Email failed:", e.message);
 }    
