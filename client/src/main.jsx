@@ -79,6 +79,18 @@ function useReveal() {
   }, []);
 }
 
+function useLiteMode() {
+  const query = "(max-width: 1024px), (pointer: coarse)";
+  const [lite, setLite] = useState(() => window.matchMedia(query).matches);
+  useEffect(() => {
+    const mq = window.matchMedia(query);
+    const update = () => setLite(mq.matches);
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
+  return lite;
+}
+
 function App() {
   const [projects, setProjects] = useState(fallbackProjects);
   const [filter, setFilter] = useState("ALL");
@@ -88,6 +100,8 @@ function App() {
   const [apiState, setApiState] = useState("checking");
   const [activeSection, setActiveSection] = useState("about");
   useReveal();
+
+  const lite = useLiteMode();
 
   useEffect(() => {
     fetch(`${API}/projects`)
@@ -153,16 +167,19 @@ function App() {
 
   return (
     <div className="app">
-      {/* 🌌 Galaxy Background */}
-      <div className="galaxy-background">
-        <Galaxy />
-      </div>
-
-      <div className="noise" />
-      <div className="star-layer star-one" />
-      <div className="star-layer star-two" />
-      <div className="cursor-orb" />
-      <div className="progress-bar" />
+      {/* 🌌 Galaxy Background: desktop only */}
+{!lite && (
+  <>
+    <div className="galaxy-background">
+      <Galaxy />
+    </div>
+    <div className="noise" />
+    <div className="cursor-orb" />
+  </>
+)}
+<div className="star-layer star-one" />
+<div className="star-layer star-two" />
+<div className="progress-bar" />
 
       <header className="nav">
         <a href="#home" className="logo">
@@ -200,8 +217,8 @@ function App() {
             <h1>
               I build{" "}
               <DepthText
-                layers={34}
-                depth={2.4}
+                layers={lite ? 18 : 34}
+                depth={lite ? 4 : 2.4}
                 faceColor="#f8fafc"
                 depthColor="#D9FF5F"
                 tilt={7.5}
