@@ -64,6 +64,18 @@ router.post("/contact", async (req, res) => {
       return res.status(400).json({ ok: false, message: "Please fill in all fields." });
     }
     const saved = await Message.create({ name, email, message });
+
+    try {
+  await transporter.sendMail({
+    from: process.env.EMAIL_USER,
+    to: process.env.EMAIL_USER,
+    replyTo: email,
+    subject: `Portfolio contact from ${name}`,
+    text: `Name: ${name}\nEmail: ${email}\n\n${message}`
+  });
+} catch (e) {
+  console.error("Email failed:", e.message);
+}    
     res.status(201).json({ ok: true, message: "Message received. Thank you!", id: saved._id });
   } catch {
     res.status(500).json({ ok: false, message: "Unable to save your message right now." });
