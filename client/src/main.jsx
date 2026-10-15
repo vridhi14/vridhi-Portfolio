@@ -51,12 +51,15 @@ const fallbackProjects = [
   },
 ];
 
+
 const skillGroups = {
   "Core CS": ["OOPS", "OS", "DBMS", "CN"],
   Frontend: ["HTML", "CSS", "Tailwind", "React"],
-  Backend: ["Node", "Express", "JWT", "Authentication", "Socket.IO"],
-  Database: ["MongoDB", "PostgreSQL"],
+  Backend: ["Node.js", "Express.js", "JWT", "Authentication", "Socket.IO"],
+  Database: ["MongoDB", "PostgreSQL", "SQL"],
   Languages: ["Java", "JavaScript"],
+  DevOps: ["Docker"],
+  "AI & LLM": ["LLM API Integration", "Prompt Engineering"],
   "Problem Solving": ["DSA in Java"],
 };
 
