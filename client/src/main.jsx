@@ -413,7 +413,7 @@ function App() {
               </h2>
             </div>
             <div className="filter-row">
-              {["ALL", "EARTH", "MARS", "JUPITER", "SATURN"].map((x) => (
+              {["ALL", "EARTH", "MARS", "JUPITER", "SATURN", "MERCURY"].map((x) => (
                 <button
                   key={x}
                   className={filter === x ? "active" : ""}
