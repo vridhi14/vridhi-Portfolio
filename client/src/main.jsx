@@ -48,7 +48,18 @@ const fallbackProjects = [
     stack: ["Node", "Express", "Socket.IO", "Leaflet"],
     live: "https://realtime-device-track-sv6k.onrender.com",
     github: "https://github.com/vridhi14/Realtime-Device-Track",
-  },
+  },  
+{
+  name: "Bank Transaction System",
+  planet: "MERCURY",
+  type: "JAVA • DATABASE",
+  description:
+    "A bank transaction management system designed to handle banking operations and maintain transaction records.",
+  stack: ["Java", "SQL", "PostgreSQL"],
+  live: "https://bank-transaction-system-lhca.onrender.com",
+  github: "https://github.com/vridhi14/Bank-Transaction-System",
+},
+
 ];
 
 
